@@ -187,6 +187,7 @@ body.load #loading-page{
     height: 110vh;
     background: var(--menu-bg);
     transform: translateX(-350px);
+    z-index: 1;
 }
 
 #menu-close{
@@ -522,4 +523,91 @@ progress{
     to {
        clip-path: inset(0 -34% 0 0);
     }
+}
+
+/* responsive */
+
+@media screen and (max-width: 400px) {
+
+    .dots{
+        position: relative;
+        top: -200px;
+    }
+
+    #container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu-overlay{
+        width: 100%;
+        height: 240vh;
+        transform: translateX(-400px);
+    }
+
+    #menu{
+        width: 100%;
+    }
+
+    #menu.open #menu-overlay{
+        display: block;
+        animation: menuOverlayResponsive 500ms ease;
+        transform: translateX(0px);
+    }
+
+    #menu.close #menu-overlay{
+        display: block;
+        animation: menuCloseOverlayResponsive 500ms ease;
+    }
+
+    #content{
+        padding: 20px 60px;
+    }
+
+    #content-grades{
+        justify-content: center;
+    }
+
+    #container-weather-week{
+        justify-content: center;
+        flex-flow: wrap;
+        gap: 40px;
+    }
+
+    #title-hightlights{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #grid-hightlight{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #code-by{
+        margin-top: 20px;
+    }
+
+
+    @keyframes menuOverlayResponsive {
+        from {
+            transform: translateX(-450px);
+          }
+    
+          to {
+            transform: translateX(0);
+          }
+    }
+    
+    @keyframes menuCloseOverlayResponsive {
+        from {
+            transform: translateX(0px);
+          }
+    
+          to {
+            transform: translateX(-450px);
+            display: none;
+          }
+    }
+    
 }
