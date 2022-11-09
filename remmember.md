@@ -1,0 +1,1 @@
+me quede en la busqueda que al dar click se busque la ciudad en la api
