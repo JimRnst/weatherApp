@@ -26,7 +26,7 @@ const events = (function(){
 
     btnSearchLocation.addEventListener('click', () => {
         const inputSearch = document.querySelector('#seach-location');
-        if(recentSearch.map(name => name).indexOf(inputSearch.value) === -1){
+        if(recentSearch.findIndex(name => name === inputSearch.value) === -1){
             recentSearch.push(inputSearch.value);
             callAPI(inputSearch.value, 'metric');
             setDomSearchs();
@@ -38,7 +38,7 @@ const events = (function(){
             document.querySelector('#box-clear-history').classList.add('show')
         }
 
-        btnRecentSearch()
+        btnRecentSearch();
     });
 
 });
@@ -49,10 +49,10 @@ const btnRecentSearch = (function(){
     btnBoxSearch.forEach(box => {
         box.addEventListener('click', (e) => {
             callAPI(e.target.firstElementChild.id, 'metric');
+            gradesInCelsius = true;
             closeMenu();
         });
     });
-    
 });
 
 const openMenu = (function(){

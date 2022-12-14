@@ -1,4 +1,4 @@
-import { btnRecentSearch } from "./eventListenner";
+import { gradesInCelsius } from "./openWeather";
 
 let recentSearch = [];
 
@@ -22,7 +22,7 @@ function setDomSearchs(){
         `;
         searchContent.prepend(div)
     }
-    
+    gradesInCelsius = true;
 }
 
 

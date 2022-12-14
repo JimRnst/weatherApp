@@ -235,4 +235,4 @@ function weatherFiveDays(date, description, tempMax, tempMin){
 
 }
 
-export {callAPI, searchWeatherWithCoords, gradesInCelsius}
+export {callAPI, searchWeatherWithCoords, gradesInCelsius, changeGrades}

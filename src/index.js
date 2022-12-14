@@ -7,6 +7,6 @@ import { events } from './functions/eventListenner';
 
 document.addEventListener('DOMContentLoaded', () => {
     createHomePage();
-    getLocalitation();
+    // getLocalitation();
     events();
 })

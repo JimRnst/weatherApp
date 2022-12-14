@@ -1,6 +1,6 @@
 import { btnRecentSearch } from "./eventListenner";
 import { searchWeatherWithCoords } from "./openWeather";
-import { recentSearch, setDomSearchs, showRecentSearch } from "./searchRecent";
+import { recentSearch, setDomSearchs } from "./searchRecent";
 
 const getLocalitation = async function(){
 
